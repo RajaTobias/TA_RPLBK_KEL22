@@ -66,11 +66,11 @@ function App() {
       </NavigationBar>
       <Routes>
       <Route path="/" element={isAuthenticated ? <Home /> : <Login />} />
-        <Route path="/beranda" exact element={<Home />} />
-        <Route path="/random-player" exact element={<RandomPlayer />} />
-        <Route path="/all-team" exact element={<AllTeam />} />
-        <Route path="/all-player" exact element={<AllPlayer />} />
-        <Route path="/detail-player" exact element={<DetailPlayer />} />
+        <Route path="/beranda" element={isAuthenticated ? <Home /> : <Login />} />
+        <Route path="/random-player" element={isAuthenticated ? <RandomPlayer /> : <Login />} />
+        <Route path="/all-team" element={isAuthenticated ? <AllTeam /> : <Login />} />
+        <Route path="/all-player" element={isAuthenticated ? <AllPlayer /> : <Login />} />
+        <Route path="/detail-player" element={isAuthenticated ? <DetailPlayer /> : <Login />} />
       </Routes>
     </div>
   );
